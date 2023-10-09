@@ -14,8 +14,8 @@ public class Main {
         // (distance / mpg) * fuel cost
         double costPerHundred = (100 / carStats[1]) * carStats[2];
         double distanceLeft = carStats[0] / carStats[1];
-        System.out.printf("Cost per 100 miles in $: %.02f\n", costPerHundred);
-        System.out.printf("Distance left in tank (miles): %.02f", distanceLeft);
+        System.out.printf("%-35s %.02f\n", "Cost per 100 miles in $:", costPerHundred);
+        System.out.printf("%-35s %.02f", "Distance left in tank (miles):", distanceLeft);
     }
 
     private static void GetInput(String question, int answerIndex) {
