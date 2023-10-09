@@ -7,13 +7,15 @@ public class Main {
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
 
-        GetInput("How much gallons does your tank hold?", 0);
+        GetInput("How much fuel is in your car in gallons?", 0);
         GetInput("What is your fuel effeciency in miles per gallon?", 1);
         GetInput("What is the price per gallon?", 2);
 
         // (distance / mpg) * fuel cost
         double costPerHundred = (100 / carStats[1]) * carStats[2];
-        System.out.printf("Cost per 100 miles in $: %.02f", costPerHundred);
+        double distanceLeft = carStats[0] / carStats[1];
+        System.out.printf("Cost per 100 miles in $: %.02f\n", costPerHundred);
+        System.out.printf("Distance left in tank (miles): %.02f", distanceLeft);
     }
 
     private static void GetInput(String question, int answerIndex) {
